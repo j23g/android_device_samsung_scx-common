@@ -16,8 +16,7 @@
 
 package org.cyanogenmod.hardware;
 
-import org.cyanogenmod.internal.util.FileUtils;
-
+import org.apache.commons.io.FileUtils;
 public class TapToWake {
 
     private static String CONTROL_PATH = "/sys/android_touch/doubletap2wake";
