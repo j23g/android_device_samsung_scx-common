@@ -60,7 +60,10 @@ on charger
     mount ext4 /dev/block/mmcblk0p27 /data nosuid,nodev,noatime wait,encryptable=footer,check
 	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
 
-service charger /charger /sbin/healthd -c
+on property:ro.bootmode=charger
+   class_start sec-charger
+
+service battery_charger /sbin/healthd -c
     class charger
     group log
     critical
