@@ -28,6 +28,9 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+	libgpspc \
+	libefuse \
+	gps.conf \
 	gps.xml
 
 # WiFi
@@ -53,5 +56,4 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-	media_codecs.xml \
-	media_codecs_performance.xml
+	media_codecs.xml
